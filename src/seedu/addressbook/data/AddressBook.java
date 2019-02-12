@@ -55,6 +55,15 @@ public class AddressBook {
     }
 
     /**
+     * Groups the equivalent person from the address book.
+     *
+     * @throws PersonNotFoundException if no such Person could be found.
+     */
+    public void groupPerson(ReadOnlyPerson toGroup) throws PersonNotFoundException {
+        allPersons.group(toGroup);
+    }
+
+    /**
      * Clears all persons and tags from the address book.
      */
     public void clear() {
