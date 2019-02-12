@@ -13,7 +13,7 @@ public class GroupCommand extends Command {
     public static final String COMMAND_WORD = "group";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": Group the person identified by the index number used in the last person listing.\n"
+            + ": Highlight the person identified by the index number used in the last person listing.\n"
             + "Parameters: INDEX\n"
             + "Example: " + COMMAND_WORD + " 1";
 
