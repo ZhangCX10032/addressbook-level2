@@ -37,6 +37,8 @@ public class UniquePersonList implements Iterable<Person> {
 
     private final List<Person> internalList = new ArrayList<>();
 
+    private final List<Person> groupedPersonList = new ArrayList<>();
+
     /**
      * Constructs empty person list.
      */
@@ -118,6 +120,18 @@ public class UniquePersonList implements Iterable<Person> {
     public void remove(ReadOnlyPerson toRemove) throws PersonNotFoundException {
         final boolean personFoundAndDeleted = internalList.remove(toRemove);
         if (!personFoundAndDeleted) {
+            throw new PersonNotFoundException();
+        }
+    }
+
+    /**
+     * Groups the equivalent person from the list.
+     *
+     * @throws PersonNotFoundException if no such person could be found in the list.
+     */
+    public void group(Person toGroup) throws PersonNotFoundException {
+        final boolean personFoundAndGrouped = groupedPersonList.add(toGroup);
+        if (!personFoundAndGrouped) {
             throw new PersonNotFoundException();
         }
     }
