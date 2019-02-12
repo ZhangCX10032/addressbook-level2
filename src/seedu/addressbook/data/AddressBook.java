@@ -59,7 +59,7 @@ public class AddressBook {
      *
      * @throws PersonNotFoundException if no such Person could be found.
      */
-    public void groupPerson(ReadOnlyPerson toGroup) throws PersonNotFoundException {
+    public void groupPerson(Person toGroup) throws PersonNotFoundException {
         allPersons.group(toGroup);
     }
 
